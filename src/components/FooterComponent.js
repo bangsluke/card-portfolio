@@ -1,23 +1,23 @@
 import * as React from "react";
-import twitterIcon from "../images/twitter.png";
-import facebookIcon from "../images/facebook.png";
-import instagramIcon from "../images/instagram.png";
-import githubIcon from "../images/github.png";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 function FooterComponent() {
 	return (
 		<div className='footer'>
 			<a href='https://twitter.com/bangsluke'>
-				<img src={twitterIcon} alt='Twitter Logo' className='social-icon'></img>
+				<TwitterIcon className='social-icon' />
 			</a>
 			<a href='https://www.facebook.com/bangsluke'>
-				<img src={facebookIcon} alt='Facebook Logo' className='social-icon'></img>
+				<FacebookIcon className='social-icon' />
 			</a>
 			<a href='https://www.instagram.com/bangsluke/'>
-				<img src={instagramIcon} alt='Instagram Logo' className='social-icon'></img>
+				<InstagramIcon className='social-icon' />
 			</a>
 			<a href='https://github.com/bangsluke'>
-				<img src={githubIcon} alt='GitHub Logo' className='social-icon'></img>
+				<GitHubIcon className='social-icon' />
 			</a>
 		</div>
 	);
