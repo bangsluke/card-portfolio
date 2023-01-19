@@ -19,15 +19,35 @@ const getOptions = (type) => ({
 	},
 	title: {
 		text: "Skills",
+		floating: true,
 		fill: "#fff",
 	},
+	legend: {
+		bubbleLegend: {
+			enabled: false,
+		},
+	},
+	// tooltip: {
+	// 	formatter: function () {
+	// 		return '<img src="' + this.point.logo + '" width="50" height="50" />' + this.point.name;
+	// 	},
+	// },
 	plotOptions: {
 		packedbubble: {
 			minSize: "30%",
 			maxSize: "100%",
 			dataLabels: {
 				enabled: true,
-				format: "{point.name}",
+				// format: "{point.name}",
+				// formatter: function () {
+				// 	return '<img src="' + this.point.logo + '" width="50" height="50" />';
+				// },
+				formatter: function () {
+					return this.point.name;
+				},
+				// style: {
+				// 	background: `url(${this.point.logo}) no-repeat center`,
+				// },
 			},
 		},
 	},
