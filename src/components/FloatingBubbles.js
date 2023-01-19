@@ -3,6 +3,8 @@ import HighchartsReact from "highcharts-react-official";
 import HighchartsMore from "highcharts/highcharts-more";
 import HighchartsAccessibility from "highcharts/modules/accessibility";
 import HighchartsExporting from "highcharts/modules/exporting";
+import { skillData } from "../data/skillData";
+
 HighchartsExporting(Highcharts);
 HighchartsAccessibility(Highcharts);
 HighchartsMore(Highcharts);
@@ -17,100 +19,39 @@ const getOptions = (type) => ({
 	},
 	title: {
 		text: "Skills",
+		floating: true,
 		fill: "#fff",
 	},
+	legend: {
+		bubbleLegend: {
+			enabled: false,
+		},
+	},
+	// tooltip: {
+	// 	formatter: function () {
+	// 		return '<img src="' + this.point.logo + '" width="50" height="50" />' + this.point.name;
+	// 	},
+	// },
 	plotOptions: {
 		packedbubble: {
 			minSize: "30%",
 			maxSize: "100%",
 			dataLabels: {
 				enabled: true,
-				format: "{point.name}",
+				// format: "{point.name}",
+				// formatter: function () {
+				// 	return '<img src="' + this.point.logo + '" width="50" height="50" />';
+				// },
+				formatter: function () {
+					return this.point.name;
+				},
+				// style: {
+				// 	background: `url(${this.point.logo}) no-repeat center`,
+				// },
 			},
 		},
 	},
-	series: [
-		{
-			name: "A",
-			data: [
-				{
-					name: "A.1",
-					value: 2,
-				},
-				{
-					name: "A.2",
-					value: 10,
-				},
-				{
-					name: "A.3",
-					value: 9,
-				},
-				{
-					name: "A.4",
-					value: 12,
-				},
-			],
-		},
-		{
-			name: "B",
-			data: [
-				{
-					name: "B.1",
-					value: 2,
-				},
-				{
-					name: "B.2",
-					value: 1,
-				},
-				{
-					name: "B.3",
-					value: 8,
-				},
-				{
-					name: "B.4",
-					value: 7,
-				},
-				{
-					name: "B.5",
-					value: 5,
-				},
-			],
-		},
-		{
-			name: "C",
-			data: [
-				{
-					name: "C.1",
-					value: 11,
-				},
-				{
-					name: "C.2",
-					value: 7,
-				},
-				{
-					name: "C.3",
-					value: 2,
-				},
-			],
-		},
-		{
-			name: "D",
-			data: [
-				{
-					name: "D.1",
-					value: 7,
-				},
-				{
-					name: "D.2",
-					value: 4,
-				},
-				{
-					name: "D.3",
-					value: 9,
-				},
-			],
-		},
-	],
+	series: skillData,
 	credits: {
 		enabled: false,
 	},
