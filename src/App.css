@@ -46,7 +46,7 @@
 
 .card {
 	background: var(--eerie-black-2);
-	height: 92vh;
+	height: max-content;
 	width: 30%;
 	border-radius: 20px;
 	text-decoration: none;
@@ -142,6 +142,7 @@ p {
 	top: 80%;
 	/* background-color: #000; */
 	padding: 5px;
+	padding-bottom: 20px;
 	height: 10%;
 	display: flex;
 	justify-content: space-evenly;
@@ -223,7 +224,7 @@ p {
 	}
 
 	.App {
-		margin-top: 220px;
+		margin-top: 270px;
 		margin-bottom: 150px;
 		flex-direction: column;
 	}
