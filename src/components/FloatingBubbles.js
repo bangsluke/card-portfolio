@@ -13,13 +13,15 @@ HighchartsMore(Highcharts);
 const getOptions = (type) => ({
 	chart: {
 		type,
-		width: 375,
-		height: 600,
+		// width: 375,
+		// height: 600,
 		backgroundColor: "transparent",
 	},
 	title: {
 		text: "Skills",
 		floating: true,
+		margin: [0, 0, 50, 0],
+		offset: 50,
 		style: {
 			color: "#ffffff",
 			fontFamily: "Roboto",

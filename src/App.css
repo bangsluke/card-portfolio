@@ -192,6 +192,8 @@ p {
 	}
 
 	.App {
+		margin-top: 170px;
+		margin-bottom: 150px;
 		flex-direction: column;
 	}
 
@@ -221,6 +223,8 @@ p {
 	}
 
 	.App {
+		margin-top: 220px;
+		margin-bottom: 150px;
 		flex-direction: column;
 	}
 
