@@ -8,7 +8,7 @@ function DetailsSection() {
 				An enthusiastic new developer, just starting out on my development path, keen to develop my coding interests.
 			</p>
 			<h3>Interests</h3>
-			<p>I'm interested in developing a few personal projects such as a stats webite for my lcoal football club.</p>
+			<p>I'm interested in developing a few personal projects such as a stats website for my local football club.</p>
 		</div>
 	);
 }
