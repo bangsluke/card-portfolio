@@ -20,12 +20,22 @@ const getOptions = (type) => ({
 	title: {
 		text: "Skills",
 		floating: true,
-		fill: "#fff",
+		style: {
+			color: "#ffffff",
+			fontFamily: "Roboto",
+		},
 	},
 	legend: {
 		bubbleLegend: {
 			enabled: false,
 		},
+		itemStyle: {
+			color: "#ffffff",
+			fontFamily: "Roboto",
+		},
+	},
+	exporting: {
+		enabled: false,
 	},
 	// tooltip: {
 	// 	formatter: function () {
@@ -62,7 +72,13 @@ const getOptions = (type) => ({
 // https://www.highcharts.com/docs/chart-and-series-types/packed-bubble
 
 function FloatingBubbles() {
-	return <HighchartsReact highcharts={Highcharts} options={getOptions("packedbubble")} />;
+	return (
+		<div className='card'>
+			<div className='floating-bubbles'>
+				<HighchartsReact highcharts={Highcharts} options={getOptions("packedbubble")} />
+			</div>
+		</div>
+	);
 }
 
 export default FloatingBubbles;
